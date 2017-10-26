@@ -1,0 +1,13 @@
+name: dnc_daemon
+version: 0.1.0
+
+authors:
+  -  Zac Nowicki <zachnowicki@gmail.com>
+
+targets:
+  dnc_daemon:
+    main: src/dnc_daemon.cr
+
+crystal: 0.23.1
+
+license: MIT

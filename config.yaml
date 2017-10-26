@@ -1,0 +1,4 @@
+---
+incoming: /union/CAM/Lead Hand/Incoming/*
+outgoing: /union/CAM/Lead Hand/Outgoing/*
+cam: /union/CAM/Parts (CAM)/*/*/*
