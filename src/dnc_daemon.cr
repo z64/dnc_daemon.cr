@@ -7,6 +7,10 @@ module DncDaemon
 
   LOGGER = Logger.new(STDOUT)
   LOGGER.level = Logger::DEBUG
+  LOGGER.formatter = Logger::Formatter.new do |severity, datetime, progname, message, io|
+    io << datetime.to_s("%m-%d %H:%M:%S") << " | " << severity << "    " << message
+  end
+
   LOGGER.info "Starting capture.."
 
   # Scan all directories in parallel
