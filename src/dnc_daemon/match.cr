@@ -32,12 +32,12 @@ module DncDaemon
       cam_outgoing = mkdir("outgoing") if files_out.any?
 
       files_in.each do |file|
-        `mv "#{file}" "#{cam_incoming}"`
+        `mv "#{file}" "#{cam_incoming}"` unless ARGV[0]? == "no-move"
         LOGGER.info("Moved #{file} to #{cam_incoming}")
       end
 
       files_out.each do |file|
-        `mv "#{file}" "#{cam_outgoing}"`
+        `mv "#{file}" "#{cam_outgoing}"` unless ARGV[0]? == "no-move"
         LOGGER.info("Moved #{file} to #{cam_outgoing}")
       end
     end
